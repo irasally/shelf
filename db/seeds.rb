@@ -1,7 +1,17 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+# -*- encoding: utf-8 -*-
+
+bookseeds =
+ [
+  {:title => 'プログラミング言語Ruby' , :authers => 'まつもとゆきひろ' :publish_year => 2009 :comment => 'Comment' :checked_out => false},
+  {:title => 'たのしいRuby' , :authers => '高橋 征義' :publish_year =>2010 :comment =>'Comment..' :checked_out => false},
+  {:title => 'Ruby 逆引きレシピ すぐに美味しいサンプル' , :authers => '島田 浩二, 設樂 洋爾, 村田 賢太, 前田 智樹, 谷口 文威' :publish_year => 2009 :comment => '札幌Ruby' :checked_out => true},
+  {:title => '初めてのRuby' , :authers => 'Yugui' :publish_year => 2008 :comment => 'Comment' :checked_out => true}
+]
+
+booksees.size.times do |n|
+  Book.create(:title => bookseeds[n][:name],
+              :authers => bookseeds[n][:authers],
+              :publish_yesr => bookseeds[n][:publishh_year],
+              :comment => bookseeds[n][:comment],
+              :checked_out => bookseeds[n][:checked_out],)
+}
