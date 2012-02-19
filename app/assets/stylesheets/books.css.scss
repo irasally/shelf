@@ -1,3 +1,22 @@
-// Place all the styles related to the books controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+table.books {
+    width: 80%;
+    margin: 10px auto;
+    background-color: #FFF;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+table.books th {
+    background-color: #CEA33A;
+}
+table.books tr {
+    border: solid 1px #ccc;
+}
+table.books td {
+    padding: 5px;
+}
+table.books col.name {
+    width:400px;
+}
+table.books col.publish_year {
+    width:180px;
+}
