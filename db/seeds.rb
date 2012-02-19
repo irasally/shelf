@@ -11,7 +11,7 @@ bookseeds =
 booksees.size.times do |n|
   Book.create(:title => bookseeds[n][:name],
               :authers => bookseeds[n][:authers],
-              :publish_yesr => bookseeds[n][:publishh_year],
+              :publish_year => bookseeds[n][:publishh_year],
               :comment => bookseeds[n][:comment],
               :checked_out => bookseeds[n][:checked_out],)
 end
