@@ -1,7 +1,8 @@
 <h1>本の詳細</h1>
 <div id="book">
-  <p><span>Title:</span><span><%= @book.title %></span></p>
-  <p><span>Auther(s):</span><span><%= @book.authers %></span></p>
-  <p><span>Publish Year:</span><span><%= @book.publish_year %></span></p>
-  <p><span>Comment:</span><span><%= @book.comment %></span></p>
+  <p><span class="caption">Title:</span><span><%= @book.title %></span></p>
+  <p><span class="caption">Auther(s):</span><span><%= @book.authers %></span></p>
+  <p><span class="caption">Publish Year:</span><span><%= @book.publish_year %></span></p>
+  <p><span class="caption">Comment:</span><span><%= @book.comment %></span></p>
 </div>
+<p class="link_to"><%= link_to "Book Listへ", :books %></p>
