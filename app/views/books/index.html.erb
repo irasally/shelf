@@ -8,7 +8,7 @@
   <th>Publish Year</th>
   <% @books.each do |book| %>
   <tr>
-    <td><%= book.title %></td>
+    <td><%= link_to book.title, book %></td>
     <td><%= book.authers %></td>
     <td><%= book.publish_year %></td>
   </tr>
