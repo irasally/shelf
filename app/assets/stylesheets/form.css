@@ -1,0 +1,31 @@
+form {
+    width: 75%;
+    margin: 15px auto;
+    background-color: #F3ECD9;
+    padding: 10px;
+    border: solid 1px #ccc;
+}
+form ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+form li {
+    clear: both;
+    margin: 0;
+    padding: 0;
+}
+form label {
+    display: block;
+    width: 200px;
+    float: left;
+    padding-top: 5px;
+}
+form input[type="text"] {
+    width:300px;
+}
+form textarea {
+    height: 150px;
+    width: 430px;
+    float: left;
+}
