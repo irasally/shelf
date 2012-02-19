@@ -7,5 +7,10 @@ class BooksController < ApplicationController
   end
   def new
     @book = Book.new
+    @years = Array.new((1985..Time.now.year).map{|y| [y,y]}.reverse)
+  end
+  def create
+    @book = Book.create(params[:book])
+    redirect_to @book
   end
 end

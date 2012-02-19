@@ -6,11 +6,7 @@
 <li><%= form.label :authers, "筆者" %><%= form.text_field :authers%></li>
 <li>
   <%= form.label :publish_year, "発行年"%>
-  <%= form.date_select :publish_year, 
-      :order => [:year], 
-      :start_year => 1985,
-      :end_year => Time.current.year
-%>
+  <%= form.select :publish_year, options_for_select(@years)%> 
 </li>
 <li><%= form.label :comment, "コメント" %><%= form.text_area :comment %></li>
 <li><%= form.check_box :checked_out %><%= form.label :checked_out, "チェック済み" %></li>
