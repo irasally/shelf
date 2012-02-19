@@ -11,3 +11,6 @@
  *= require_self
  *= require_tree .
 */
+p.link_to {
+    padding-left:8px;
+}
