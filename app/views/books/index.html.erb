@@ -1,1 +1,13 @@
-<h1>My Books</h1>
+<h1>My Book List</h1>
+<table class="books">
+  <col class="title"/>
+  <col class="authers"/>
+  <col class="publish_year"/>
+  <% @books.each do |book| %>
+  <tr>
+    <td><%= book.title %></td>
+    <td><%= book.authers %></td>
+    <td><%= book.publish_year %></td>
+  </tr>
+  <% end %>
+</table>

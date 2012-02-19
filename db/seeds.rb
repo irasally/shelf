@@ -8,10 +8,10 @@ bookseeds =
   {:title => '初めてのRuby' , :authers => 'Yugui', :publish_year => 2008, :comment => 'Comment', :checked_out => true}
 ]
 
-booksees.size.times do |n|
-  Book.create(:title => bookseeds[n][:name],
+bookseeds.size.times do |n|
+  Book.create(:title => bookseeds[n][:title],
               :authers => bookseeds[n][:authers],
-              :publish_year => bookseeds[n][:publishh_year],
+              :publish_year => bookseeds[n][:publish_year],
               :comment => bookseeds[n][:comment],
               :checked_out => bookseeds[n][:checked_out],)
 end
