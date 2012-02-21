@@ -22,4 +22,9 @@ class BooksController < ApplicationController
     @book.update_attributes(params[:book])
     redirect_to @book
   end
+  def destroy
+    @book = Book.find(params[:id])
+    @book.destroy
+    redirect_to :books
+  end
 end
