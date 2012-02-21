@@ -17,4 +17,9 @@ class BooksController < ApplicationController
     @book = Book.create(params[:book])
     redirect_to @book
   end
+  def update
+    @book = Book.find(params[:id])
+    @book.update_attributes(params[:book])
+    redirect_to @book
+  end
 end
