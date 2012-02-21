@@ -27,4 +27,9 @@ class BooksController < ApplicationController
     @book.destroy
     redirect_to :books
   end
+  def check_out
+    @book = Book.find(params[:id])
+    @book.update_attributes(:checked_out => true)
+    redirect_to :back
+  end
 end
