@@ -1,6 +1,6 @@
 class BooksController < ApplicationController
   def index
-    @books = Book.where(:checked_out => false)
+    @books = Book.where(:check_out => false)
   end
   def show
     @book = Book.find(params[:id])
@@ -29,7 +29,7 @@ class BooksController < ApplicationController
   end
   def check_out
     @book = Book.find(params[:id])
-    @book.update_attributes(:checked_out => true)
+    @book.update_attributes(:check_out => true)
     redirect_to :back
   end
 end

@@ -7,7 +7,7 @@
   <%= form.select :publish_year, options_for_select(@years)%> 
 </li>
 <li><%= form.label :comment, "コメント" %><%= form.text_area :comment %></li>
-<li><%= form.check_box :checked_out %><%= form.label :checked_out, "チェック済み" %></li>
+<li><%= form.check_box :check_out %><%= form.label :check_out, "貸し出し中" %></li>
 <li><%= form.submit "送信" %></li>
 </ul>
 <% end %>

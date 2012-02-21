@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(:version => 20120204080245) do
     t.string   "authers"
     t.integer  "publish_year"
     t.text     "comment"
-    t.boolean  "checked_out"
+    t.boolean  "check_out"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
   end
