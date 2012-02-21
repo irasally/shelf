@@ -1,10 +1,12 @@
 == Routing table
 
-|Method|URL Path     |Action |                   |
-|GET   |/books       |index  |一覧表示            |
-|GET   |/books/2     |show   |詳細表示            |
-|GET   |/books/new   |new    |新規登録フォームの表示|
-|GET   |/books/2/edit|edit   |修正フォームの表示   |
-|POST  |/books       |create |レコードの追加(挿入) |
-|PUT   |/books/2     |update |レコードの変更(更新) |
-|DELETE|/books/2     |destroy|レコードの削除       |
+#<table>
+#<th>Method</th><th>URL Path</th><th>Action</th><th></th>
+#<tr><td>GET   </td><td>/books       </td><td>index  </td><td>一覧表示            </td></tr>
+#<tr><td>GET   </td><td>/books/2     </td><td>show   </td><td>詳細表示            </td></tr>
+#<tr><td>GET   </td><td>/books/new   </td><td>new    </td><td>新規登録フォームの表示</td></tr>
+#<tr><td>GET   </td><td>/books/2/edit</td><td>edit   </td><td>修正フォームの表示   </td></tr>
+#<tr><td>POST  </td><td>/books       </td><td>create </td><td>レコードの追加(挿入) </td></tr>
+#<tr><td>PUT   </td><td>/books/2     </td><td>update </td><td>レコードの変更(更新) </td></tr>
+#<tr><td>DELETE</td><td>/books/2     </td><td>destroy</td><td>レコードの削除       </td></tr>
+#</table>
