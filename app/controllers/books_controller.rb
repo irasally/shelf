@@ -2,6 +2,10 @@ class BooksController < ApplicationController
   def index
     @books = Book.where(:check_out => false)
   end
+  def checked_out
+    @books = Book.where(:check_out => true)
+    render :index
+  end
   def show
     @book = Book.find(params[:id])
   end
