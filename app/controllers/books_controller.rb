@@ -36,4 +36,9 @@ class BooksController < ApplicationController
     @book.update_attributes(:check_out => true)
     redirect_to :back
   end
+  def check_in
+    @book = Book.find(params[:id])
+    @book.update_attributes(:check_out => false)
+    redirect_to :back
+  end
 end
