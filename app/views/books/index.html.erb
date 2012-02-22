@@ -26,7 +26,12 @@
     <td><%= book.publish_year %></td>
     <td>
       <%= link_to '修正', [:edit, book]%>
-      <%= link_to '貸出', [:check_out, book], :method => :put %>
+      <%= if book.check_out?
+	    link_to('在庫', [:check_in, book], :method => :put) 
+          else 
+	    link_to('貸出', [:check_out, book], :method => :put) 
+          end
+      %>
       <%= link_to '削除', book, :method => :delete, :confirm => '本当に削除しますか？' %>
     </td>
   </tr>
