@@ -1,0 +1,21 @@
+ul.navigation {
+    width: 80%;
+    margin: 15px auto 2px;
+    list-style: none;
+    padding: 0;
+}
+ul.navigation li {
+    display: inline;
+    margin-right: 1px;
+    background-color: #E4CDAA;
+    border: 1px solid #ccc;
+    padding: 8px;
+}
+ul.navigation li.selected {
+    background-color: #CEA33A;
+    font-weight: bold;
+}
+ul.navigation li a {
+    color: #666;
+    text-decoration:none;
+}
