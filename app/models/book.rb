@@ -5,5 +5,5 @@ class Book < ActiveRecord::Base
     where(["title LIKE ? ", "%#{query}%"])
   }
 
-  validates :title, :presence => true
+  validates :title, :presence => true, :length => {:maximum => 80}
 end
