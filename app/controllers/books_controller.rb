@@ -1,9 +1,9 @@
 class BooksController < ApplicationController
   def index
-    @books = Book.where(:checked_out => false).order("publish_year")
+    @books = Book.checked_in
   end
   def checked_out
-    @books = Book.where(:checked_out => true).order("publish_year")
+    @books = Book.checked_out
     render :index
   end
   def show
