@@ -7,4 +7,5 @@ class Book < ActiveRecord::Base
 
   validates :title, :presence => true, :length => { :maximum => 80 }
   validates :authers, :length => { :maximum => 80 }
+  validates :comment, :length => { :maximum => 400 }
 end
