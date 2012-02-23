@@ -4,4 +4,6 @@ class Book < ActiveRecord::Base
   scope :search, lambda { |query| 
     where(["title LIKE ? ", "%#{query}%"])
   }
+
+  validates :title, :presence => true
 end
