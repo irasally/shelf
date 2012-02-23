@@ -24,16 +24,7 @@
     <td><%= link_to book.title, book %></td>
     <td><%= book.authers %></td>
     <td><%= book.publish_year %></td>
-    <td>
-      <%= link_to '修正', [:edit, book]%>
-      <%= if book.checked_out?
-	    link_to('在庫', [:check_in, book], :method => :put) 
-          else 
-	    link_to('貸出', [:check_out, book], :method => :put) 
-          end
-      %>
-      <%= delete_link(book) %>
-    </td>
+    <td><%= link_for(book)%></td>
   </tr>
   <% end %>
 </table>
