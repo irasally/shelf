@@ -6,6 +6,11 @@ class BooksController < ApplicationController
     @books = Book.checked_out
     render :index
   end
+  def search
+    @books = Book.checked_in
+    @books = @books.search(params[:query]) if params[:query].present?
+    render :index
+  end
   def show
     @book = Book.find(params[:id])
   end
