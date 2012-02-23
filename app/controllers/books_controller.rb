@@ -16,20 +16,30 @@ class BooksController < ApplicationController
   end
   def new
     @book = Book.new
-    @years = Array.new((1985..Time.now.year).map{|y| [y,y]}.reverse)
+    set_year
   end
   def edit
     @book = Book.find(params[:id])
-    @years = Array.new((1985..Time.now.year).map{|y| [y,y]}.reverse)
+    set_year
   end
   def create
-    @book = Book.create(params[:book])
-    redirect_to @book
+    puts params[:book]
+    @book = Book.new(params[:book])
+    if @book.save
+      redirect_to @book
+    else
+      set_year
+      render :new
+    end
   end
   def update
     @book = Book.find(params[:id])
-    @book.update_attributes(params[:book])
-    redirect_to @book
+    if @book.update_attributes(params[:book])
+      redirect_to @book
+    else
+      set_year
+      render :edit
+    end
   end
   def destroy
     @book = Book.find(params[:id])
@@ -45,5 +55,8 @@ class BooksController < ApplicationController
     @book = Book.find(params[:id])
     @book.update_attributes(:checked_out => false)
     redirect_to :back
+  end
+  def set_year
+    @years = Array.new((1985..Time.now.year).map{|y| [y,y]}.reverse)
   end
 end
