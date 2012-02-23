@@ -1,10 +1,11 @@
 <%= form_for @book do |form| %>
+<% unless @book.errors.empty? %><p class="input_error">入力に誤りがあります</p><% end %>
 <ul>
 <li><%= form.label :title, "タイトル" %><%= form.text_field :title %></li>
 <li><%= form.label :authers, "筆者" %><%= form.text_field :authers%></li>
 <li>
   <%= form.label :publish_year, "発行年"%>
-  <%= form.select :publish_year, options_for_select(@years)%> 
+  <%= form.select :publish_year, options_for_select(@years)%>
 </li>
 <li><%= form.label :comment, "コメント" %><%= form.text_area :comment %></li>
 <li><%= form.check_box :checked_out %><%= form.label :checked_out, "貸し出し中" %></li>
