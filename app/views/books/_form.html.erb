@@ -1,5 +1,12 @@
 <%= form_for @book do |form| %>
-<% unless @book.errors.empty? %><p class="input_error">入力に誤りがあります</p><% end %>
+<% unless @book.errors.empty? %>
+<p class="input_error">入力に誤りがあります</p>
+<ul class="error_messages">
+  <% @book.errors.full_messages.each do |message| %>
+  <li><%= message %></li>
+  <% end %>
+</ul>
+<% end %>
 <ul>
 <li><%= form.label :title, "タイトル" %><%= form.text_field :title %></li>
 <li><%= form.label :authers, "筆者" %><%= form.text_field :authers%></li>
