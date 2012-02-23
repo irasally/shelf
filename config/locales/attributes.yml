@@ -1,0 +1,9 @@
+ja:
+  activerecord:
+    attributes:
+      book:
+        title: タイトル
+        authers: 筆者
+        publish_year: 発行年
+        comment: コメント
+        checked_out: 貸し出し中
