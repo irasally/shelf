@@ -1,10 +1,14 @@
 == Routing table
 
- | method | path        | action | role                 
- |GET     |/books       |index   |一覧表示              
- |GET     |/books/2     |show    |詳細表示              
- |GET     |/books/new   |new     |新規登録フォームの表示
- |GET     |/books/2/edit|edit    |修正フォームの表示    
- |POST    |/books       |create  |レコードの追加(挿入)  
- |PUT     |/books/2     |update  |レコードの変更(更新)  
- |DELETE  |/books/2     |destroy |レコードの削除        
+ | method | path                 | action    | role                 
+ |GET     |/books                |index      |在庫一覧表示              
+ |GET     |/books/checked_out    |checked_out|貸し出し中一覧表示
+ |GET     |/books/search?query=XX|search     |タイトル検索結果一覧表示
+ |GET     |/books/2              |show       |詳細表示              
+ |GET     |/books/new            |new        |新規登録フォームの表示
+ |GET     |/books/2/edit         |edit       |修正フォームの表示    
+ |POST    |/books                |create     |レコードの追加(挿入)  
+ |PUT     |/books/2              |update     |レコードの変更(更新)  
+ |DELETE  |/books/2              |destroy    |レコードの削除        
+ |PUT     |/books/2              |check_out  |在庫を貸し出し中にする  
+ |PUT     |/books/2              |check_in   |貸し出し中を在庫にする
