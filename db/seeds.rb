@@ -25,8 +25,8 @@ end
 end
 
 # Cagtegory
-[{:name => '技術書' , :color => 'D0755F' },
- {:name => '文庫'   , :color => 'AAD8F3' },
- {:name => '料理本' , :color => 'C4DAAD' } ].each do |c|
+[{:name => '技術書' , :color => '#D0755F' },
+ {:name => '文庫'   , :color => '#043264' },
+ {:name => '料理本' , :color => '#65A830' } ].each do |c|
   Category.create(:name => c[:name], :color => c[:color])
 end
