@@ -1,0 +1,44 @@
+table.books {
+    width: 80%;
+    margin: 5px auto 10px;
+    background-color: #FFF;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+table.books th {
+    background-color: #CEA33A;
+}
+table.books tr {
+    border: solid 1px #ccc;
+}
+table.books td {
+    padding: 5px;
+}
+table.books col.name {
+    width:400px;
+}
+table.books col.publish_year {
+    width:180px;
+}
+div#book span {
+    padding: 10px;
+}
+div#book span.caption {
+    color: #C18C1B;
+    font-weight: bold;
+}
+p.input_error{
+    color: #950000;
+    font-weight: bold;
+}
+ul#categories {
+    width: 80%;
+    list-style: none;
+    margin: 15px auto 15px;
+    padding: 10px;
+    border: dotted 1px #ccc;
+}
+ul#categories li {
+    display: inline;
+    padding: 5px;
+}
