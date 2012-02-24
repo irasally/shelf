@@ -9,7 +9,7 @@ class BooksController < ApplicationController
   def search
     @books = Book.checked_in
     @books = @books.search(params[:query]) if params[:query].present?
-    @books = @bools.paginate(:page => params[:page], :per_page => 10)
+    @books = @books.paginate(:page => params[:page], :per_page => 10)
     render :index
   end
   def show
@@ -17,11 +17,9 @@ class BooksController < ApplicationController
   end
   def new
     @book = Book.new
-    set_year
   end
   def edit
     @book = Book.find(params[:id])
-    set_year
   end
   def create
     puts params[:book]
@@ -29,7 +27,6 @@ class BooksController < ApplicationController
     if @book.save
       redirect_to @book
     else
-      set_year
       render :new
     end
   end
@@ -38,7 +35,6 @@ class BooksController < ApplicationController
     if @book.update_attributes(params[:book])
       redirect_to @book
     else
-      set_year
       render :edit
     end
   end
@@ -56,8 +52,5 @@ class BooksController < ApplicationController
     @book = Book.find(params[:id])
     @book.update_attributes(:checked_out => false)
     redirect_to :back
-  end
-  def set_year
-    @years = Array.new((1985..Time.now.year).map{|y| [y,y]}.reverse)
   end
 end

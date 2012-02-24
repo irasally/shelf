@@ -12,7 +12,7 @@
 <li><%= form.label :authers %><%= form.text_field :authers%></li>
 <li>
   <%= form.label :publish_year %>
-  <%= form.select :publish_year, options_for_select(@years)%>
+  <%= form.select :publish_year, options_for_select(Array.new((1985..Time.now.year).map{|y| [y,y]}.reverse))%>
 </li>
 <li><%= form.label :comment %><%= form.text_area :comment %></li>
 <li><%= form.check_box :checked_out %><%= form.label :checked_out %></li>
