@@ -13,5 +13,13 @@ bookseeds.size.times do |n|
               :authers => bookseeds[n][:authers],
               :publish_year => bookseeds[n][:publish_year],
               :comment => bookseeds[n][:comment],
-              :checked_out => bookseeds[n][:checked_out],)
+              :checked_out => bookseeds[n][:checked_out])
+end
+
+200.times do |n|
+  Book.create(:title => "Sample Book Title #{n}",
+              :authers => "Sample Book Authers #{n}",
+              :publish_year => 2000 + n%12,
+              :comment => "sample comment",
+              :checked_out => n%2 == 0)
 end
