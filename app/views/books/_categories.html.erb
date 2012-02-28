@@ -1,5 +1,5 @@
 <ul id="categories">
 <% Category.all.each do |c| %>
-<li style="color:<%=c.color %>"><%= c.name %></li>
+<li><%= link_to c.name, [c, :books], :style => "color: #{c.color}" %></li>
 <% end %>
 </ul>

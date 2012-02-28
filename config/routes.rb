@@ -4,4 +4,7 @@ Shelf::Application.routes.draw do
     put :check_out, :check_in, :on => :member
     get :checked_out, :search, :on => :collection
   end
+  resources :categories do
+    resources :books
+  end
 end
