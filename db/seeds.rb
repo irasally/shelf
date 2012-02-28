@@ -30,3 +30,8 @@ end
  {:name => '料理本' , :color => '#65A830' } ].each do |c|
   Category.create(:name => c[:name], :color => c[:color])
 end
+
+categories = Category.order('id').all
+Book.order('id').limit(50).all.each do |b|
+  categories[b.id%3].books << b
+end
