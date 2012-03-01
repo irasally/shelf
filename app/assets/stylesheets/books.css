@@ -49,3 +49,7 @@ ul#categories li.selected {
 ul#categories li.all {
     color: #CEA33A;
 }
+ul#categories li span.count{
+    color: #aaa;
+    font-size: small;
+}

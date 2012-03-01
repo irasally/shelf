@@ -7,9 +7,9 @@
 <% end %>
 <% Category.all.each do |c| %>
   <% if @category != c %>
-    <li><%= link_to c.name, [action, c, :books], :style => "color: #{c.color}" %></li>
+    <li><%= link_to c.name, [action, c, :books], :style => "color: #{c.color}" %><span class="count">(<%= c.books.size %>)</span></li>
   <% else %>
-    <li class="selected" style="color:<%=c.color%>"><%= c.name %></li>
+    <li class="selected" style="color:<%=c.color%>"><%= c.name %><span class="count">(<%= c.books.size %>)</span></li>
   <% end %>
 <% end %>
 </ul>
