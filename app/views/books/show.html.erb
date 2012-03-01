@@ -1,5 +1,6 @@
 <h1>本の詳細</h1>
 <div id="book">
+  <p><span class="caption">Category:</span><span style="color:<%= @book.category.color %>"><%= @book.category.name %></span></p>
   <p><span class="caption">Title:</span><span><%= @book.title %></span></p>
   <p><span class="caption">Auther(s):</span><span><%= @book.authers %></span></p>
   <p><span class="caption">Publish Year:</span><span><%= @book.publish_year %></span></p>
