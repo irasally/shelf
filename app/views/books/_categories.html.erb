@@ -1,12 +1,13 @@
+<% action = params[:action] == 'checked_out' ? :checked_out : nil %>
 <ul id="categories">
 <% if @category %>
- <li><%= link_to "全て", :books , :style => "color: #CEA33A" %><li>
+ <li><%= link_to "全て", [action, :books] , :style => "color: #CEA33A" %><li>
 <% else %>
  <li class="selected all">全て</li>
 <% end %>
 <% Category.all.each do |c| %>
   <% if @category != c %>
-    <li><%= link_to c.name, [c, :books], :style => "color: #{c.color}" %></li>
+    <li><%= link_to c.name, [action, c, :books], :style => "color: #{c.color}" %></li>
   <% else %>
     <li class="selected" style="color:<%=c.color%>"><%= c.name %></li>
   <% end %>
