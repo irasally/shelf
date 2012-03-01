@@ -5,6 +5,8 @@ Shelf::Application.routes.draw do
     get :checked_out, :search, :on => :collection
   end
   resources :categories do
-    resources :books
+    resources :books do
+      get :checked_out, :on => :collection
+    end
   end
 end
