@@ -1,1 +1,2 @@
-<%= image_tag "shelf_logo.png", :size => "30x30", :alt => "サイトロゴ" %> Omuko's bookshelf
+<p id="logo"><%= image_tag "shelf_logo.png", :size => "30x30", :alt => "サイトロゴ" %> Omuko's bookshelf</p>
+<p id="status">現在登録されている書籍は<%= Book.count %>冊です。そのうち<%= Book.where(:checked_out => true).count %>冊が貸し出されています。</p>

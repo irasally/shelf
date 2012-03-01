@@ -1,9 +1,14 @@
 body {
     background-color: #DFDF9F;
 }
-div#header {
+div#header p#logo {
     padding-right: 25px;
     text-align: right;
+}
+div#header p#status {
+    padding-left: 10px;
+    text-align: left;
+    color: #3F84F2;
 }
 div#footer {
     margin: 10px auto;
