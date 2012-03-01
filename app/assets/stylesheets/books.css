@@ -42,3 +42,10 @@ ul#categories li {
     display: inline;
     padding: 5px;
 }
+ul#categories li.selected {
+    font-weight: bold;
+    background-color: #FCF181;
+}
+ul#categories li.all {
+    color: #CEA33A;
+}
