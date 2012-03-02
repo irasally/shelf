@@ -11,4 +11,8 @@ module BooksHelper
     links << delete_link(book)
     raw(links.join(' '))
   end
+  def category_options
+    options = [[ '------', nil ]]
+    options += Category.all.map{ |c| [c.name, c.id] }
+  end
 end
