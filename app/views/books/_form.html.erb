@@ -10,7 +10,7 @@
 <ul>
 <li><%= form.label :title %><%= form.text_field :title %></li>
 <li><%= form.label :authers %><%= form.text_field :authers%></li>
-<li><%= form.label :category_id %><%= form.select :category_id, category_options %></li>
+<li><%= form.label :category_id %><%= render "radio_buttons", :form => form %></li>
 <li>
   <%= form.label :publish_year %>
   <%= form.select :publish_year, options_for_select(Array.new((1985..Time.now.year).map{|y| [y,y]}.reverse))%>

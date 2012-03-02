@@ -29,3 +29,10 @@ form textarea {
     width: 430px;
     float: left;
 }
+form ul.radio_buttons {
+    display: inline-block;
+}
+form ul.radio_buttons label {
+    display: inline;
+    float: none;
+}
